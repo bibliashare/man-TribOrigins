@@ -1,0 +1,12 @@
+@Comment{jabref-meta: databaseType:bibtex;}
+
+@Book{ARA,
+  publisher = {Sociedade Bíblica do Brasil},
+  title     = {A B{í}blia Sagrada},
+  year      = {1993},
+  address   = {Barueri, SP, Brasil},
+  edition   = {Traduzida em Português por João Ferreira de Almeida. Revista e Atualizada, 2a Ed. (ARA)},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
