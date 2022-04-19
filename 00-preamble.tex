@@ -2,7 +2,7 @@
 %                                                           Packages                                                           %
 %------------------------------------------------------------------------------------------------------------------------------%
 \usepackage{booktabs}
-\usepackage[brazil,greek,french,english]{babel}
+\usepackage[greek,french,english,main=brazil]{babel}   % last becomes the active one
 \usepackage[squaren,cdot]{SIunits}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -34,14 +34,32 @@
 \setlength{\columnseprule}{0.2pt}
 \setlength{\fboxrule}{0.4pt} % Width of the border around the abstract
 %-------------------------------------------------------------------------------------------------------------------------------
-\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
-\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
-\definecolor{color3}{RGB}{0,0,192} % Color of the article title and sections
+\definecolor{color1}{RGB}{090,000,000} % Color of the article title and sections
+\definecolor{color2}{RGB}{020,020,000} % Color of the boxes behind the abstract and headings
+\definecolor{color3}{RGB}{192,000,000} % Color of the article title and sections
 %-------------------------------------------------------------------------------------------------------------------------------
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}
 %-------------------------------------------------------------------------------------------------------------------------------
 \newcommand{\XXX}[1]{\relax}
+%-----------------------------------------------------------------------------------------------
+\newcommand{\YA}{%                                                                              
+    \mbox{%                                                                                     
+        Y\makebox[0pt][l]{\hspace{-0.178em}\raisebox{-0.00ex}{\scalebox{0.30}{E}}}%             
+        H\makebox[0pt][l]{\hspace{-0.010em}\raisebox{-0.00ex}{\scalebox{0.30}{O}}}%             
+        W\makebox[0pt][l]{\hspace{-0.245em}\raisebox{-0.00ex}{\scalebox{0.30}{A}}}%             
+        H%                                                                                      
+    }%                                                                                          
+}                                                                                               
+%-----------------------------------------------------------------------------------------------
+\newcommand{\ver}[1]{%                                                                          
+    \raisebox{0.50ex}{%                                                                         
+        \scalebox{1.1}{%                                                                        
+            \pmb{\textbf{{#1}}}%                                               
+        }%                                                                                      
+    }%                                                                                          
+}                                                                                               
+%-----------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------------------------------%
 %                                                           Metadata                                                           %
 %------------------------------------------------------------------------------------------------------------------------------%
@@ -50,37 +68,30 @@
 \makeatother
 %-------------------------------------------------------------------------------------------------------------------------------
 % Journal information
-\JournalInfo{engrXiv}
+\JournalInfo{OSF Preprints}
 \Archive{Compiled on \input{\jobname.info} -- Version \input{PreprintVersion.tex}}
 % Article title
-\PaperTitle{Lattice Nomenclature Survey from LGA to Modern LBM}
+\PaperTitle{Título}
 \Authors{%
     C.~Naaktgeboren\textsuperscript{$\star$},
 }
 \affiliation{%
-    \textsuperscript{1}%
-    \textit{%
-        Adjunct Professor.
-        Universidade Tecnológica Federal do Paraná -- UTFPR, Câmpus Guarapuava.
-        Grupo de Pesquisa em Ciências Térmicas.
-}}
-\affiliation{%
     \textsuperscript{$\star$}%
-    \textbf{Corresponding  author}: NaaktgeborenC$\cdot$PhD\textcircled{a}gmail$\cdot$com
+    \textbf{Autor correspondente}: NaaktgeborenC$\cdot$PhD\textcircled{a}gmail$\cdot$com
 }
 \Keywords{%
     keyword 1 ---
     keyword 2 ---
     keyword 3.
 }
-\newcommand{\keywordname}{Keywords}
+\newcommand{\keywordname}{Palavras-Chave}
 \Highlights{%
     highlight 1 ---
     highlight 2.
 }
-\newcommand{\highlightname}{Highlights}
+\newcommand{\highlightname}{Destaques}
 %-------------------------------------------------------------------------------------------------------------------------------
 \Abstract{%
-    Here goes the Abstract.
+    Aqui vai o resumo.
 }
 %-------------------------------------------------------------------------------------------------------------------------------
