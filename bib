@@ -13,14 +13,16 @@ SYNOPSIS
         where COMMAND is one of:
             help (no args)
                 Print this and exits.
-            BASE (no args)
-                Lists the accessible bibliography database, one file per line.
-            LIST (no args)
+            BASE [<args>]
+                Lists the accessible bibliography database, one file  per  line,
+                optionally filtering by <args>.
+            LIST [<args>]
                 Lists keys on the default bibfile ./bibfile.bib initializing  it
-                if needed.
-            LST (no args)
+                if needed, optionally filtering by <args>.
+            LST [<args>]
                 Generates a machine-readable list of keys from  default  bibfile
-                ./bibfile.bib initializing it if needed.
+                ./bibfile.bib initializing it if needed, optionally filtering by
+                <args>.
             ADD <bibpats>
                 Adds all bibliographic entries from files matching each  one  of
                 the <bibpats>  (no  wildcards),  if  existing,  to  the  default
@@ -41,6 +43,7 @@ SYNOPSIS
                 Backs up  ./bibfile.bib  into  ./bibfile.bkp,  then  resets  the
                 ./bibfile.bib into an empty file.
             SORT
+                Sorts entries in ./bibfile.bib by key.
 
 AUTHOR
     Naaktgeboren, C.
@@ -128,16 +131,30 @@ function lstBib() {
     fi
 }
 
+function _baseLinks() {
+    find . -maxdepth 1 -type l -regex "./[A-Z]*" | sed 's|^./||g'
+}
+
+function _dbase() {
+    find -L $(_baseLinks) -maxdepth 1 -name '*\.bib' | grep -v "${THEBIB}" | sort -n
+}
+
 function dbase() {
-    find -L . -name '*\.bib' | grep -v "${THEBIB}" | sort -n
+    if [ "$#" -lt 1 ]; then
+        _dbase
+    else
+        p="$1"
+        shift
+        dbase "$@" | grep "$p"
+    fi
 }
 
 function dbfiles() {
-    for i in $(dbase); do basename "${i}"; done
+    for i in $(dbase "$@"); do basename "${i}"; done
 }
 
 function keysOf() {
-    FULPTH="$(find -L . -name ${1}.bib)"
+    FULPTH="$(find -L $(_baseLinks) -maxdepth 1 -name ${1}.bib)"
     grep '^@' "${FULPTH}" |\
         grep -v '^@Comment' |\
         sed 's|^.*{||g' |\
@@ -160,7 +177,7 @@ function addBib() {
                 for BIBKEY in $(keysOf ${BIBSRC}); do
                     echo -e "INFO: + '${BIBKEY}' (from ${BIBSRC})."
                 done
-                cat $(find -L . -name "${BIBSRC}.bib") >> "${THEBIB}"
+                cat $(find -L $(_baseLinks) -maxdepth 1 -name "${BIBSRC}.bib") >> "${THEBIB}"
                 echo "" >> "${THEBIB}"
             fi
         done
@@ -194,7 +211,7 @@ case "${COMM}" in
     #                           Remote DBs opts                            #
     #----------------------------------------------------------------------#
     "BASE")
-        dbase;;
+        dbase "$@";;
     #----------------------------------------------------------------------#
     #                              Query opts                              #
     #----------------------------------------------------------------------#
