@@ -26,6 +26,13 @@ cc/%.pdf: cc/%.svg
 		--export-filename=$@ \
 		$<
 
+ref/%.pdf: ref/%.pdf.url
+	wget \
+		--input-file=$< \
+		--output-document=$@ \
+		--user-agent="Mozilla/5.0 (X11; Linux x86_64)"
+	touch $@
+
 fig/%.pdf: fig/%.svg
 	inkscape \
 		--export-type=pdf \
