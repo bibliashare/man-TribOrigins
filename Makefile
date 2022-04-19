@@ -5,6 +5,20 @@ clean:
 		rm -vf ${PREF}.$$EXT; \
 	done
 
+cc/%.png: cc/%.png.url
+	wget \
+		--input-file=$< \
+		--output-document=$@ \
+		--user-agent="Mozilla/5.0 (X11; Linux x86_64)"
+	touch $@
+
+cc/%.svg: cc/%.svg.url
+	wget \
+		--input-file=$< \
+		--output-document=$@ \
+		--user-agent="Mozilla/5.0 (X11; Linux x86_64)"
+	touch $@
+
 cc/%.pdf: cc/%.svg
 	inkscape \
 		--export-type=pdf \
