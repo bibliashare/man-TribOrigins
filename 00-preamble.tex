@@ -34,9 +34,11 @@
 \setlength{\columnseprule}{0.2pt}
 \setlength{\fboxrule}{0.4pt} % Width of the border around the abstract
 %-------------------------------------------------------------------------------------------------------------------------------
-\definecolor{color1}{RGB}{090,000,000} % Color of the article title and sections
+\definecolor{color1}{RGB}{128,000,000} % Color of the article title and sections
 \definecolor{color2}{RGB}{020,020,000} % Color of the boxes behind the abstract and headings
 \definecolor{color3}{RGB}{192,000,000} % Color of the article title and sections
+%-------------------------------------------------------------------------------------------------------------------------------
+\definecolor{verses}{RGB}{128,000,000} % Color for bible verse quotations
 %-------------------------------------------------------------------------------------------------------------------------------
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}
@@ -59,6 +61,10 @@
         }%                                                                                      
     }%                                                                                          
 }                                                                                               
+%-----------------------------------------------------------------------------------------------
+\newcommand{\bLineQuote}[3]{%
+    ``\textcolor{verses}{{#1}}'' {#2} ({#3})~\cite{{#3}}
+}
 %-----------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------------------------------%
 %                                                           Metadata                                                           %
