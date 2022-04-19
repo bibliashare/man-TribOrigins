@@ -1,0 +1,86 @@
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                           Packages                                                           %
+%------------------------------------------------------------------------------------------------------------------------------%
+\usepackage{booktabs}
+\usepackage[brazil,greek,french,english]{babel}
+\usepackage[squaren,cdot]{SIunits}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{textcomp}
+\usepackage{pslatex}
+\usepackage[lining]{ebgaramond}
+\usepackage{indentfirst}
+\usepackage{xspace}
+%-------------------------------------------------------------------------------------------------------------------------------
+\usepackage[hyperindex,breaklinks]{hyperref} % Required for hyperlinks
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                           Commands                                                           %
+%------------------------------------------------------------------------------------------------------------------------------%
+\hypersetup{%
+    hidelinks,
+    colorlinks,
+    breaklinks=true,
+    urlcolor=color3,
+    citecolor=color1,
+    linkcolor=color1,
+    bookmarksopen=false,
+    pdftitle={Title},
+    pdfauthor={Author}
+}
+%-------------------------------------------------------------------------------------------------------------------------------
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\columnsep}{5.5mm}
+\setlength{\columnseprule}{0.2pt}
+\setlength{\fboxrule}{0.4pt} % Width of the border around the abstract
+%-------------------------------------------------------------------------------------------------------------------------------
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+\definecolor{color3}{RGB}{0,0,192} % Color of the article title and sections
+%-------------------------------------------------------------------------------------------------------------------------------
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+%-------------------------------------------------------------------------------------------------------------------------------
+\newcommand{\XXX}[1]{\relax}
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                           Metadata                                                           %
+%------------------------------------------------------------------------------------------------------------------------------%
+\makeatletter
+\immediate\write18{datelog > \jobname.info}
+\makeatother
+%-------------------------------------------------------------------------------------------------------------------------------
+% Journal information
+\JournalInfo{engrXiv}
+\Archive{Compiled on \input{\jobname.info} -- Version \input{PreprintVersion.tex}}
+% Article title
+\PaperTitle{Lattice Nomenclature Survey from LGA to Modern LBM}
+\Authors{%
+    C.~Naaktgeboren\textsuperscript{$\star$},
+}
+\affiliation{%
+    \textsuperscript{1}%
+    \textit{%
+        Adjunct Professor.
+        Universidade Tecnológica Federal do Paraná -- UTFPR, Câmpus Guarapuava.
+        Grupo de Pesquisa em Ciências Térmicas.
+}}
+\affiliation{%
+    \textsuperscript{$\star$}%
+    \textbf{Corresponding  author}: NaaktgeborenC$\cdot$PhD\textcircled{a}gmail$\cdot$com
+}
+\Keywords{%
+    keyword 1 ---
+    keyword 2 ---
+    keyword 3.
+}
+\newcommand{\keywordname}{Keywords}
+\Highlights{%
+    highlight 1 ---
+    highlight 2.
+}
+\newcommand{\highlightname}{Highlights}
+%-------------------------------------------------------------------------------------------------------------------------------
+\Abstract{%
+    Here goes the Abstract.
+}
+%-------------------------------------------------------------------------------------------------------------------------------
