@@ -10,3 +10,25 @@
 
 @Comment{jabref-meta: databaseType:bibtex;}
 
+@Book{ARC,
+  publisher = {Sociedade Bíblica do Brasil},
+  title     = {{A} {Bí}blia {S}agrada {C}ontendo o {V}elho e o {N}ovo {T}estamento},
+  year      = {1995},
+  address   = {Brasília, DF, Brasil},
+  edition   = {Traduzida em Português por João Ferreira de Almeida. Edição Revista e Corrigida (ARC)},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
+@Book{A21,
+  editor    = {de Oliveira, Daniel},
+  publisher = {Vida Nova},
+  title     = {B{í}blia {S}agrada {A}lmeida {S}éculo 21: {A}ntigo e {N}ovo {T}estamento},
+  year      = {2010},
+  address   = {São Paulo, SP, Brasil},
+  edition   = {2a Edição Revista e Atualizada conforme o novo acordo ortográfico (A21)},
+  isbn      = {978-85-275-0396-9},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
+
