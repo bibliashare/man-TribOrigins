@@ -132,7 +132,7 @@ function lstBib() {
 }
 
 function _baseLinks() {
-    find . -maxdepth 1 -type l -regex "./[A-Z]*" | sed 's|^./||g'
+    find . -maxdepth 1 -type l -regex "./[A-Z].*" | sed 's|^./||g'
 }
 
 function _dbase() {
