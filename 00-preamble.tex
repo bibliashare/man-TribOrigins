@@ -65,13 +65,16 @@
 \newcommand{\bLineQuote}[3]{%
     ``\textcolor{verses}{{#1}}'' {#2} ({#3})~\cite{{#3}}
 }
-\newcommand{\bBlockQuote}[3]{%
-    \vspace*{0.3\baselineskip}%
+\newcommand{\bBlockQuoteAft}[3]{%
     \par\noindent\hspace*{0.1\linewidth}%
     \begin{minipage}{0.8\linewidth}\raggedleft%
         \noindent ``\textcolor{verses}{{#1}}'' ---~{#2}~({#3})~\cite{{#3}}
     \end{minipage}%
-    \vspace*{0.3\baselineskip}%
+    \vspace*{0.5\baselineskip}%
+}
+\newcommand{\bBlockQuote}[3]{%
+    \vspace*{0.5\baselineskip}%
+    \bBlockQuoteAft{{#1}}{{#2}}{{#3}}
 }
 %-----------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------------------------------%
