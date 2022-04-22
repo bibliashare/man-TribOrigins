@@ -10,43 +10,46 @@
 %                                                            Fonts                                                             %
 %------------------------------------------------------------------------------------------------------------------------------%
 \defaultfontfeatures{Ligatures=TeX}
-\setmainfont{Cormorant Garamond}[
-    Path            = /usr/share/fonts/TTF/,
-    Extension       = .ttf,
-    Regular         = *-Medium,
-    Italic          = *-MediumItalic,
-    Bold            = *-Bold,
-    BoldItalic      = *-BoldItalic,
-    SmallCapsFont   = {CormorantSC},
-]
-\setsansfont{Fira Sans Condensed}[
-    Path        = /usr/share/fonts/TTF/,
-    Extension   = .ttf,
-    Regular     = *-Medium,
-    Italic      = *-MediumItalic,
-    Bold        = *-ExtraBold,
-    BoldItalic  = *-ExtraBoldItalic,
-]
-\setmonofont{Julia Mono}[
-    Path        = /usr/share/fonts/TTF/,
-    Extension   = .ttf,
-    Regular     = *-Regular,
-    Italic      = *-Italic,
-    Bold        = *-Bold,
-    BoldItalic  = *-BoldItalic,
-]
-\newfontfamily\infantfont{Cormorant Infant}[
-    Path            = /usr/share/fonts/TTF/,
-    Extension       = .ttf,
-    Regular         = *-Medium,
-    Italic          = *-MediumItalic,
-    Bold            = *-Bold,
-    BoldItalic      = *-BoldItalic,
-]
+\setmainfont{Kurier-Regular.otf}
+%%%\setmainfont{"Cormorant Garamond"}[
+%%%    Path            = /usr/share/fonts/TTF/,
+%%%    Extension       = .ttf,
+%%%    Regular         = *-Medium,
+%%%    Italic          = *-MediumItalic,
+%%%    Bold            = *-Bold,
+%%%    BoldItalic      = *-BoldItalic,
+%%%    SmallCapsFont   = {CormorantSC},
+%%%    Scale           = MatchLowercase,
+%%%]
+%%%\setsansfont{Fira Sans Condensed}[
+%%%    Path        = /usr/share/fonts/TTF/,
+%%%    Extension   = .ttf,
+%%%    Regular     = *-Medium,
+%%%    Italic      = *-MediumItalic,
+%%%    Bold        = *-ExtraBold,
+%%%    BoldItalic  = *-ExtraBoldItalic,
+%%%    Scale       = MatchLowercase,
+%%%]
+%%%\setmonofont{Julia Mono}[
+%%%    Path        = /usr/share/fonts/TTF/,
+%%%    Extension   = .ttf,
+%%%    Regular     = *-Regular,
+%%%    Italic      = *-Italic,
+%%%    Bold        = *-Bold,
+%%%    BoldItalic  = *-BoldItalic,
+%%%    Scale       = MatchLowercase,
+%%%]
+%%%\newfontfamily\infamily{Cormorant Infant}[
+%%%    Path            = /usr/share/fonts/TTF/,
+%%%    Extension       = .ttf,
+%%%    Regular         = *-Medium,
+%%%    Italic          = *-MediumItalic,
+%%%    Bold            = *-Bold,
+%%%    BoldItalic      = *-BoldItalic,
+%%%    Scale           = MatchLowercase,
+%%%]
 %------------------------------------------------------------------------------------------------------------------------------%
 %                                                           Commands                                                           %
-%------------------------------------------------------------------------------------------------------------------------------%
-\def\versecolor{800000FF}
 %------------------------------------------------------------------------------------------------------------------------------%
 \newcommand{\XXX}[1]{\relax}
 %------------------------------------------------------------------------------------------------------------------------------%
@@ -68,12 +71,12 @@
 }
 %------------------------------------------------------------------------------------------------------------------------------%
 \newcommand{\bLineQuote}[3]{%
-    ``{\addfontfeature{Color=\versecolor}{#1}}'' {#2} ({#3})~\cite{{#3}}%
+    ``{\addfontfeature{Color=800000FF}{#1}}'' {#2} ({#3})~\cite{{#3}}%
 }
 \newcommand{\bBlockQuoteAft}[3]{%
     \par\noindent\hspace*{0.1\linewidth}%
     \begin{minipage}{0.8\linewidth}\raggedleft%
-        \noindent ``{\addfontfeature{Color=\versecolor}{#1}}'' ---~{#2}~({#3})~\cite{{#3}}
+        \noindent ``{\addfontfeature{Color=800000FF}{#1}}'' ---~{#2}~({#3})~\cite{{#3}}
     \end{minipage}%
     \vspace*{0.5\baselineskip}%
     \linebreak%
