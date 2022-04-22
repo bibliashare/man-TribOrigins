@@ -1,79 +1,79 @@
 %------------------------------------------------------------------------------------------------------------------------------%
 %                                                           Packages                                                           %
 %------------------------------------------------------------------------------------------------------------------------------%
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath,amsfonts,amssymb,amsthm}
-\usepackage{graphicx,xcolor}
-\usepackage{booktabs}
-\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm,headheight=12pt,a5paper]{geometry}
-\usepackage[labelfont={bf,rm,small},labelsep=period,justification=raggedright]{caption}
-\setlength{\abovecaptionskip}{4pt}
-\setlength{\belowcaptionskip}{4pt}
-\usepackage{enumitem}
+\usepackage[margin=2.0cm,a5paper]{geometry}
+\usepackage{fontspec}
+\usepackage{graphicx}
 \usepackage[greek,english,portuges]{babel}   % last becomes the active one
-\usepackage[squaren,cdot]{SIunits}
-\usepackage{textcomp}
-\usepackage{pslatex}
-%%%\usepackage[lining]{ebgaramond}
 \usepackage{indentfirst}
-\usepackage{xspace}
-%-------------------------------------------------------------------------------------------------------------------------------
-\usepackage[hyperindex,breaklinks]{hyperref} % Required for hyperlinks
-%-------------------------------------------------------------------------------------------------------------------------------
-\hypersetup{%
-    hidelinks,
-    colorlinks,
-    breaklinks=true,
-    urlcolor=color3,
-    citecolor=color1,
-    linkcolor=color1,
-    bookmarksopen=false,
-    pdftitle={Title},
-    pdfauthor={Author}
-}
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                            Fonts                                                             %
+%------------------------------------------------------------------------------------------------------------------------------%
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Cormorant Garamond}[
+    Path            = /usr/share/fonts/TTF/,
+    Extension       = .ttf,
+    Regular         = *-Medium,
+    Italic          = *-MediumItalic,
+    Bold            = *-Bold,
+    BoldItalic      = *-BoldItalic,
+    SmallCapsFont   = {CormorantSC},
+]
+\setsansfont{Fira Sans Condensed}[
+    Path        = /usr/share/fonts/TTF/,
+    Extension   = .ttf,
+    Regular     = *-Medium,
+    Italic      = *-MediumItalic,
+    Bold        = *-ExtraBold,
+    BoldItalic  = *-ExtraBoldItalic,
+]
+\setmonofont{Julia Mono}[
+    Path        = /usr/share/fonts/TTF/,
+    Extension   = .ttf,
+    Regular     = *-Regular,
+    Italic      = *-Italic,
+    Bold        = *-Bold,
+    BoldItalic  = *-BoldItalic,
+]
+\newfontfamily\infantfont{Cormorant Infant}[
+    Path            = /usr/share/fonts/TTF/,
+    Extension       = .ttf,
+    Regular         = *-Medium,
+    Italic          = *-MediumItalic,
+    Bold            = *-Bold,
+    BoldItalic      = *-BoldItalic,
+]
 %------------------------------------------------------------------------------------------------------------------------------%
 %                                                           Commands                                                           %
 %------------------------------------------------------------------------------------------------------------------------------%
-\setlength{\abovecaptionskip}{4pt}
-\setlength{\columnsep}{5.5mm}
-\setlength{\columnseprule}{0.2pt}
-\setlength{\fboxrule}{0.4pt} % Width of the border around the abstract
-%-------------------------------------------------------------------------------------------------------------------------------
-\definecolor{color1}{RGB}{128,000,000} % Color of the article title and sections
-\definecolor{color2}{RGB}{020,020,000} % Color of the boxes behind the abstract and headings
-\definecolor{color3}{RGB}{192,000,000} % Color of the article title and sections
-%-------------------------------------------------------------------------------------------------------------------------------
-\definecolor{verses}{RGB}{128,000,000} % Color for bible verse quotations
-%-------------------------------------------------------------------------------------------------------------------------------
-\newtheorem{theorem}{Theorem}
-\newtheorem{definition}{Definition}
-%-------------------------------------------------------------------------------------------------------------------------------
+\def\versecolor{800000FF}
+%------------------------------------------------------------------------------------------------------------------------------%
 \newcommand{\XXX}[1]{\relax}
-%-----------------------------------------------------------------------------------------------
-\newcommand{\YA}{%                                                                              
-    \mbox{%                                                                                     
-        Y\makebox[0pt][l]{\hspace{-0.178em}\raisebox{-0.00ex}{\scalebox{0.30}{E}}}%             
-        H\makebox[0pt][l]{\hspace{-0.010em}\raisebox{-0.00ex}{\scalebox{0.30}{O}}}%             
-        W\makebox[0pt][l]{\hspace{-0.245em}\raisebox{-0.00ex}{\scalebox{0.30}{A}}}%             
-        H%                                                                                      
-    }%                                                                                          
-}                                                                                               
-%-----------------------------------------------------------------------------------------------
-\newcommand{\ver}[1]{%                                                                          
-    \raisebox{0.50ex}{%                                                                         
-        \scalebox{1.1}{%                                                                        
-            \pmb{\textbf{{#1}}}%                                               
-        }%                                                                                      
-    }%                                                                                          
-}                                                                                               
-%-----------------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------------------------------------------------------%
+\newcommand{\YA}{%
+    \mbox{%
+        Y\makebox[0pt][l]{\hspace{-0.178em}\raisebox{-0.00ex}{\scalebox{0.30}{E}}}%
+        H\makebox[0pt][l]{\hspace{-0.010em}\raisebox{-0.00ex}{\scalebox{0.30}{O}}}%
+        W\makebox[0pt][l]{\hspace{-0.245em}\raisebox{-0.00ex}{\scalebox{0.30}{A}}}%
+        H%
+    }%
+}
+%------------------------------------------------------------------------------------------------------------------------------%
+\newcommand{\ver}[1]{%
+    \raisebox{0.50ex}{%
+        \scalebox{1.1}{%
+            \pmb{\textbf{{#1}}}%
+        }%
+    }%
+}
+%------------------------------------------------------------------------------------------------------------------------------%
 \newcommand{\bLineQuote}[3]{%
-    ``\textcolor{verses}{{#1}}'' {#2} ({#3})~\cite{{#3}}%
+    ``{\addfontfeature{Color=\versecolor}{#1}}'' {#2} ({#3})~\cite{{#3}}%
 }
 \newcommand{\bBlockQuoteAft}[3]{%
     \par\noindent\hspace*{0.1\linewidth}%
     \begin{minipage}{0.8\linewidth}\raggedleft%
-        \noindent ``\textcolor{verses}{{#1}}'' ---~{#2}~({#3})~\cite{{#3}}
+        \noindent ``{\addfontfeature{Color=\versecolor}{#1}}'' ---~{#2}~({#3})~\cite{{#3}}
     \end{minipage}%
     \vspace*{0.5\baselineskip}%
     \linebreak%
@@ -82,7 +82,6 @@
     \vspace*{0.5\baselineskip}%
     \bBlockQuoteAft{{#1}}{{#2}}{{#3}}
 }
-%-----------------------------------------------------------------------------------------------
 %------------------------------------------------------------------------------------------------------------------------------%
 %                                                           Metadata                                                           %
 %------------------------------------------------------------------------------------------------------------------------------%
@@ -94,11 +93,4 @@
 \title{As Origens da Grande Tribulação}
 \author{C.~Naaktgeboren\thanks{\texttt{C.$\,$Naaktgeboren <bibliashare\textcircled{a}gmail.com>}},}
 \date{{\scriptsize\texttt{Compilado em \input{\jobname.info} - Revisão \input{PreprintVersion.tex}}}}
-%%%\keywords{
-%%%    grande tribulação,
-%%%    origens,
-%%%    Israel,
-%%%    nações pagãs,
-%%%    igreja.
-%%%}
 %-------------------------------------------------------------------------------------------------------------------------------

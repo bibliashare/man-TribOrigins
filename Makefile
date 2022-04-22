@@ -49,8 +49,8 @@ fig/%.pdf: fig/%.svg
 ${PREF}.pdf: ${PREF}.tex 0*tex PreprintVersion.tex \
 		cc/by.pdf \
 		bibfile.bib
-	pdflatex --enable-write18 ${PREF}.tex
+	xelatex --enable-write18 ${PREF}.tex
 	bibtex ${PREF}
-	pdflatex --enable-write18 ${PREF}.tex
-	pdflatex --enable-write18 ${PREF}.tex
+	xelatex --enable-write18 ${PREF}.tex
+	xelatex --enable-write18 ${PREF}.tex
 
