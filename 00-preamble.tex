@@ -1,12 +1,17 @@
 %------------------------------------------------------------------------------------------------------------------------------%
 %                                                           Packages                                                           %
 %------------------------------------------------------------------------------------------------------------------------------%
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{graphicx,xcolor}
 \usepackage{booktabs}
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm,headheight=12pt,a5paper]{geometry}
+\usepackage[labelfont={bf,rm,small},labelsep=period,justification=raggedright]{caption}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{4pt}
+\usepackage{enumitem}
 \usepackage[greek,french,english,main=brazil]{babel}   % last becomes the active one
 \usepackage[squaren,cdot]{SIunits}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm}
 \usepackage{textcomp}
 \usepackage{pslatex}
 \usepackage[lining]{ebgaramond}
@@ -14,9 +19,7 @@
 \usepackage{xspace}
 %-------------------------------------------------------------------------------------------------------------------------------
 \usepackage[hyperindex,breaklinks]{hyperref} % Required for hyperlinks
-%------------------------------------------------------------------------------------------------------------------------------%
-%                                                           Commands                                                           %
-%------------------------------------------------------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------------------------------------
 \hypersetup{%
     hidelinks,
     colorlinks,
@@ -28,7 +31,9 @@
     pdftitle={Title},
     pdfauthor={Author}
 }
-%-------------------------------------------------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------------------------------------------------------%
+%                                                           Commands                                                           %
+%------------------------------------------------------------------------------------------------------------------------------%
 \setlength{\abovecaptionskip}{4pt}
 \setlength{\columnsep}{5.5mm}
 \setlength{\columnseprule}{0.2pt}
@@ -71,6 +76,7 @@
         \noindent ``\textcolor{verses}{{#1}}'' ---~{#2}~({#3})~\cite{{#3}}
     \end{minipage}%
     \vspace*{0.5\baselineskip}%
+    \linebreak%
 }
 \newcommand{\bBlockQuote}[3]{%
     \vspace*{0.5\baselineskip}%
@@ -81,37 +87,18 @@
 %                                                           Metadata                                                           %
 %------------------------------------------------------------------------------------------------------------------------------%
 \makeatletter
-\immediate\write18{datelog > \jobname.info}
+\immediate\write18{datelog.pt > \jobname.info}
 \makeatother
 %-------------------------------------------------------------------------------------------------------------------------------
-% Journal information
-\JournalInfo{OSF Preprints}
-\Archive{Compiled on \input{\jobname.info} -- Version \input{PreprintVersion.tex}}
 % Article title
-\PaperTitle{As Origens da Grande Tribulação}
-\Authors{%
-    C.~Naaktgeboren\textsuperscript{$\star$},
-}
-\affiliation{%
-    \textsuperscript{$\star$}%
-    \textbf{Autor correspondente}:
-        \texttt{C.$\,$Naaktgeboren <bibliashare\textcircled{a}gmail.com>}
-}
-\Keywords{%
-    grande tribulação ---
-    origens ---
-    Israel ---
-    nações pagãs ---
-    igreja.
-}
-\newcommand{\keywordname}{Palavras-Chave}
-\Highlights{%
-    examina as origens da grande tribulação nas Escrituras ---
-    faz aplicações a Israel, nações pagãs, e à igreja.
-}
-\newcommand{\highlightname}{Destaques}
-%-------------------------------------------------------------------------------------------------------------------------------
-\Abstract{%
-    Aqui vai o resumo.
-}
+\title{As Origens da Grande Tribulação}
+\author{C.~Naaktgeboren\thanks{\texttt{C.$\,$Naaktgeboren <bibliashare\textcircled{a}gmail.com>}},}
+\date{{\scriptsize\texttt{Compilado em \input{\jobname.info} - Revisão \input{PreprintVersion.tex}}}}
+%%%\keywords{
+%%%    grande tribulação,
+%%%    origens,
+%%%    Israel,
+%%%    nações pagãs,
+%%%    igreja.
+%%%}
 %-------------------------------------------------------------------------------------------------------------------------------
