@@ -9,15 +9,21 @@
 %------------------------------------------------------------------------------------------------------------------------------%
 %                                                            Fonts                                                             %
 %------------------------------------------------------------------------------------------------------------------------------%
-\defaultfontfeatures{Ligatures=TeX}
+\defaultfontfeatures{
+    Ligatures               = TeX,
+    Numbers                 = {Monospaced, Uppercase}, % Lining, Proportional, OldStyle
+}
 \setmainfont{CormorantGaramond}[
-    Path            = /usr/share/fonts/TTF/,
-    Extension       = .ttf,
-    UprightFont     = *-SemiBold,
-    ItalicFont      = *-SemiBoldItalic,
-    BoldFont        = *-Bold,
-    BoldItalicFont  = *-BoldItalic,
-    SmallCapsFont   = CormorantSC-SemiBold,
+    Path                    = /usr/share/fonts/TTF/,
+    Extension               = .ttf,
+    UprightFont             = *-Medium,
+    ItalicFont              = *-MediumItalic,
+    BoldFont                = *-Bold,
+    BoldItalicFont          = *-BoldItalic,
+    SmallCapsFont           = CormorantUpright-Medium,
+    BoldFeatures            = {FakeBold=1.5},
+    BoldItalicFeatures      = {FakeBold=1.5},
+    SlantedFeatures         = {FakeSlant=0.2},
 ]
 \setsansfont{FiraSans-Regular}[
     Path            = /usr/share/fonts/TTF/,
