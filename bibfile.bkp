@@ -15,7 +15,7 @@
   title     = {A {Bí}blia {S}agrada},
   year      = {1993},
   address   = {Barueri, SP, Brasil},
-  edition   = {Traduzida em Português por João Ferreira de Almeida. Revista e Atualizada, 2{$^a$} Ed.~({ARA})},
+  edition   = {Traduzida em {P}ortuguês por {J}oão {F}erreira de {A}lmeida. {R}evista e {A}tualizada, 2{$^a$} Ed.~({ARA})},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
@@ -25,7 +25,7 @@
   title     = {{A} {Bí}blia {S}agrada {C}ontendo o {V}elho e o {N}ovo {T}estamento},
   year      = {1995},
   address   = {Brasília, DF, Brasil},
-  edition   = {Traduzida em Português por João Ferreira de Almeida. Edição Revista e Corrigida ({ARC})},
+  edition   = {Traduzida em {P}ortuguês por {J}oão {F}erreira de {A}lmeida. Edição {R}evista e {C}orrigida ({ARC})},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
@@ -35,7 +35,7 @@
   title     = {B{í}blia {P}eshitta em {P}ortuguês},
   year      = {2018},
   address   = {Niterói, RJ, Brasil},
-  edition   = {Tradução dos Antigos Manuscritos Aramaicos ({PESH})},
+  edition   = {Tradução dos {A}ntigos {M}anuscritos {A}ramaicos ({PESH})},
   isbn      = {978-85-8158-177-4},
 }
 
@@ -46,7 +46,7 @@
   publisher = {Society of Biblical Literature and Logos Bible Software},
   title     = {{SBL} {G}reek {N}ew {T}estament},
   year      = {2010},
-  edition   = {Copyright {©} 2010 Society of Biblical Literature and Logos Bible Software ({SBL})},
+  edition   = {Copyright {©} 2010 {S}ociety of {B}iblical {L}iterature and {L}ogos {B}ible {S}oftware ({SBL})},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
