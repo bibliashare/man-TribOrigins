@@ -11,7 +11,7 @@
 %------------------------------------------------------------------------------------------------------------------------------%
 \defaultfontfeatures{
     Ligatures               = TeX,
-    Numbers                 = {Monospaced, Uppercase}, % Lining, Proportional, OldStyle
+    % Numbers                 = {Lining}, % Lining, Proportional, OldStyle, Uppercase, Monospaced
 }
 
 % Main font choice
@@ -23,18 +23,10 @@
 % Mono font choice
 \input{monofont.tex}
 
-\newfontfamily\cormorantinfantfamily{CormorantInfant-Medium}[
-    Path                    = /usr/share/fonts/TTF/,
-    Extension               = .ttf,
-    ItalicFont              = CormorantInfant-MediumItalic,
-    BoldFont                = CormorantInfant-Bold,
-    BoldItalicFont          = CormorantInfant-BoldItalic,
-    BoldFeatures            = {FakeBold=1.5},
-    BoldItalicFeatures      = {FakeBold=1.5},
-    SlantedFeatures         = {FakeSlant=0.2},
-    Scale                   = MatchLowercase,
-]
+% New Font Families
+\input{fontfams.tex}
 
+% Colors as Add-on Font Features
 \newfontfeature{ScriptureColor}{color=C00000FF}
 
 %------------------------------------------------------------------------------------------------------------------------------%
@@ -48,14 +40,6 @@
         H\makebox[0pt][l]{\hspace{-0.010em}\raisebox{-0.00ex}{\scalebox{0.30}{O}}}%
         W\makebox[0pt][l]{\hspace{-0.245em}\raisebox{-0.00ex}{\scalebox{0.30}{A}}}%
         H%
-    }%
-}
-%------------------------------------------------------------------------------------------------------------------------------%
-\newcommand{\ver}[1]{%
-    \raisebox{0.50ex}{%
-        \scalebox{1.1}{%
-            \pmb{\textbf{{#1}}}%
-        }%
     }%
 }
 %------------------------------------------------------------------------------------------------------------------------------%
