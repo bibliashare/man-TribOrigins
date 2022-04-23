@@ -17,14 +17,26 @@
 %%% % QT .otf main font choice
 %%% \input{mainfontQT.tex}
 
-\setmainfont{Crimson}[
-    Extension               = .otf,
-    UprightFont             = *-Roman,
+\setmainfont{GentiumBookPlus}[
+    Path                    = /usr/share/fonts/gentium/,
+    Extension               = .ttf,
+    UprightFont             = *-Regular,
     ItalicFont              = *-Italic,
     BoldFont                = *-Bold,
     BoldItalicFont          = *-BoldItalic,
+    BoldFeatures            = {FakeBold=1.2},
+    BoldItalicFeatures      = {FakeBold=1.2},
     SlantedFeatures         = {FakeSlant=0.2},
 ]
+
+%%%\setmainfont{Crimson}[
+%%%    Extension               = .otf,
+%%%    UprightFont             = *-Roman,
+%%%    ItalicFont              = *-Italic,
+%%%    BoldFont                = *-Bold,
+%%%    BoldItalicFont          = *-BoldItalic,
+%%%    SlantedFeatures         = {FakeSlant=0.2},
+%%%]
 
 %%%\setmainfont{Tempora}[
 %%%    Extension               = .otf,
