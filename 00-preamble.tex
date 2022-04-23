@@ -14,105 +14,14 @@
     Numbers                 = {Monospaced, Uppercase}, % Lining, Proportional, OldStyle
 }
 
-%%% % QT .otf main font choice
-%%% \input{mainfontQT.tex}
+% Main font choice
+\input{mainfont.tex}
 
-\setmainfont{CrimsonPro}[
-    Path                    = /usr/share/fonts/TTF/,
-    Extension               = .ttf,
-    UprightFont             = *-Regular,
-    ItalicFont              = *-Italic,
-    BoldFont                = *-ExtraBold,
-    BoldItalicFont          = *-ExtraBoldItalic,
-    SlantedFeatures         = {FakeSlant=0.2},
-]
+% Sans font choice
+\input{sansfont.tex}
 
-%%%\setmainfont{GentiumBookPlus}[
-%%%    Path                    = /usr/share/fonts/gentium/,
-%%%    Extension               = .ttf,
-%%%    UprightFont             = *-Regular,
-%%%    ItalicFont              = *-Italic,
-%%%    BoldFont                = *-Bold,
-%%%    BoldItalicFont          = *-BoldItalic,
-%%%    BoldFeatures            = {FakeBold=1.2},
-%%%    BoldItalicFeatures      = {FakeBold=1.2},
-%%%    SlantedFeatures         = {FakeSlant=0.2},
-%%%]
-
-%%%\setmainfont{Crimson}[
-%%%    Extension               = .otf,
-%%%    UprightFont             = *-Roman,
-%%%    ItalicFont              = *-Italic,
-%%%    BoldFont                = *-Bold,
-%%%    BoldItalicFont          = *-BoldItalic,
-%%%    SlantedFeatures         = {FakeSlant=0.2},
-%%%]
-
-%%%\setmainfont{Tempora}[
-%%%    Extension               = .otf,
-%%%    UprightFont             = *-Regular,
-%%%    ItalicFont              = *-Italic,
-%%%    BoldFont                = *-Bold,
-%%%    BoldItalicFont          = *-BoldItalic,
-%%%    BoldFeatures            = {FakeBold=1.2},
-%%%    BoldItalicFeatures      = {FakeBold=1.2},
-%%%    SlantedFeatures         = {FakeSlant=0.2},
-%%%]
-
-%%%\setmainfont{GaramondLibre}[
-%%%    Extension               = .otf,
-%%%    UprightFont             = *-Regular,
-%%%    ItalicFont              = *-Italic,
-%%%    BoldFont                = *-Bold,
-%%%    BoldItalicFont          = *-BoldItalic,
-%%%    BoldFeatures            = {FakeBold=1.5},
-%%%    BoldItalicFeatures      = {FakeBold=1.5},
-%%%    SlantedFeatures         = {FakeSlant=0.2},
-%%%]
-
-%%%\setmainfont{CormorantInfant}[
-%%%    Path                    = /usr/share/fonts/TTF/,
-%%%    Extension               = .ttf,
-%%%    UprightFont             = *-Medium,
-%%%    ItalicFont              = *-MediumItalic,
-%%%    BoldFont                = *-Bold,
-%%%    BoldItalicFont          = *-BoldItalic,
-%%%    BoldFeatures            = {FakeBold=1.5},
-%%%    BoldItalicFeatures      = {FakeBold=1.5},
-%%%    SlantedFeatures         = {FakeSlant=0.2},
-%%%]
-
-%%%\setmainfont{CormorantGaramond}[
-%%%    Path                    = /usr/share/fonts/TTF/,
-%%%    Extension               = .ttf,
-%%%    UprightFont             = *-Medium,
-%%%    ItalicFont              = *-MediumItalic,
-%%%    BoldFont                = *-Bold,
-%%%    BoldItalicFont          = *-BoldItalic,
-%%%    BoldFeatures            = {FakeBold=1.5},
-%%%    BoldItalicFeatures      = {FakeBold=1.5},
-%%%    SlantedFeatures         = {FakeSlant=0.2},
-%%%]
-
-\setsansfont{FiraSans-Regular}[
-    Path                    = /usr/share/fonts/TTF/,
-    Extension               = .ttf,
-    ItalicFont              = FiraSans-Italic,
-    BoldFont                = FiraSans-ExtraBold,
-    BoldItalicFont          = FiraSans-ExtraBoldItalic,
-    Scale                   = MatchLowercase,
-    SlantedFeatures         = {FakeSlant=0.2},
-]
-
-\setmonofont{JuliaMono}[
-    Path            = /usr/share/fonts/TTF/,
-    Extension       = .ttf,
-    UprightFont     = *-Medium,
-    ItalicFont      = *-MediumItalic,
-    BoldFont        = *-Bold,
-    BoldItalicFont  = *-BoldItalic,
-    Scale           = MatchLowercase,
-]
+% Mono font choice
+\input{monofont.tex}
 
 \newfontfamily\cormorantinfantfamily{CormorantInfant-Medium}[
     Path                    = /usr/share/fonts/TTF/,
