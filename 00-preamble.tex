@@ -42,15 +42,18 @@
     BoldItalicFont  = *-BoldItalic,
     Scale           = MatchLowercase,
 ]
-%%%\newfontfamily\infamily{Cormorant Infant}[
-%%%    Path            = /usr/share/fonts/TTF/,
-%%%    Extension       = .ttf,
-%%%    Regular         = *-Medium,
-%%%    Italic          = *-MediumItalic,
-%%%    Bold            = *-Bold,
-%%%    BoldItalic      = *-BoldItalic,
-%%%    Scale           = MatchLowercase,
-%%%]
+\newfontfamily\cormorantinfantfamily{CormorantInfant-Medium}[
+    Path                    = /usr/share/fonts/TTF/,
+    Extension               = .ttf,
+    ItalicFont              = CormorantInfant-MediumItalic,
+    BoldFont                = CormorantInfant-Bold,
+    BoldItalicFont          = CormorantInfant-BoldItalic,
+    BoldFeatures            = {FakeBold=1.5},
+    BoldItalicFeatures      = {FakeBold=1.5},
+    SlantedFeatures         = {FakeSlant=0.2},
+    Scale                   = MatchLowercase,
+]
+\newfontfeature{ScriptureColor}{color=C00000FF}
 %------------------------------------------------------------------------------------------------------------------------------%
 %                                                           Commands                                                           %
 %------------------------------------------------------------------------------------------------------------------------------%
@@ -74,12 +77,12 @@
 }
 %------------------------------------------------------------------------------------------------------------------------------%
 \newcommand{\bLineQuote}[3]{%
-    ``\textrm{\addfontfeature{Color=C00000FF}{#1}}'' {#2} ({#3})~\cite{{#3}}%
+    ``\textrm{\addfontfeature{ScriptureColor}{#1}}'' {#2} ({#3})~\cite{{#3}}%
 }
 \newcommand{\bBlockQuoteAft}[3]{%
     \par\noindent\hspace*{0.1\linewidth}%
     \begin{minipage}{0.8\linewidth}\raggedleft%
-        \noindent ``\textrm{\addfontfeature{Color=C00000FF}{#1}}'' ---~{#2}~({#3})~\cite{{#3}}
+        \noindent ``\textrm{\addfontfeature{ScriptureColor}{#1}}'' ---~{#2}~({#3})~\cite{{#3}}
     \end{minipage}%
     \vspace*{1.0\baselineskip}%
     \linebreak%
