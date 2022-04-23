@@ -46,7 +46,7 @@ fig/%.pdf: fig/%.svg
 		--export-filename=$@ \
 		$<
 
-${PREF}.pdf: ${PREF}.tex 0*tex PreprintVersion.tex \
+${PREF}.pdf: ${PREF}.tex ${PREF}.info ${PREF}.fontinfo 0*tex PreprintVersion.tex \
 		cc/by.pdf \
 		bibfile.bib
 	xelatex --enable-write18 ${PREF}.tex
