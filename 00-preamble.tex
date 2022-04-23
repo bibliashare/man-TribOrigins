@@ -14,8 +14,20 @@
     Numbers                 = {Monospaced, Uppercase}, % Lining, Proportional, OldStyle
 }
 
-% QT .otf main font choice
-\input{mainfontQT.tex}
+%%% % QT .otf main font choice
+%%% \input{mainfontQT.tex}
+
+\setmainfont{CormorantInfant}[
+    Path                    = /usr/share/fonts/TTF/,
+    Extension               = .ttf,
+    UprightFont             = *-Medium,
+    ItalicFont              = *-MediumItalic,
+    BoldFont                = *-Bold,
+    BoldItalicFont          = *-BoldItalic,
+    BoldFeatures            = {FakeBold=1.5},
+    BoldItalicFeatures      = {FakeBold=1.5},
+    SlantedFeatures         = {FakeSlant=0.2},
+]
 
 %%%\setmainfont{CormorantGaramond}[
 %%%    Path                    = /usr/share/fonts/TTF/,
@@ -28,6 +40,7 @@
 %%%    BoldItalicFeatures      = {FakeBold=1.5},
 %%%    SlantedFeatures         = {FakeSlant=0.2},
 %%%]
+
 \setsansfont{FiraSans-Regular}[
     Path                    = /usr/share/fonts/TTF/,
     Extension               = .ttf,
@@ -37,6 +50,7 @@
     Scale                   = MatchLowercase,
     SlantedFeatures         = {FakeSlant=0.2},
 ]
+
 \setmonofont{JuliaMono}[
     Path            = /usr/share/fonts/TTF/,
     Extension       = .ttf,
@@ -46,6 +60,7 @@
     BoldItalicFont  = *-BoldItalic,
     Scale           = MatchLowercase,
 ]
+
 \newfontfamily\cormorantinfantfamily{CormorantInfant-Medium}[
     Path                    = /usr/share/fonts/TTF/,
     Extension               = .ttf,
@@ -57,7 +72,9 @@
     SlantedFeatures         = {FakeSlant=0.2},
     Scale                   = MatchLowercase,
 ]
+
 \newfontfeature{ScriptureColor}{color=C00000FF}
+
 %------------------------------------------------------------------------------------------------------------------------------%
 %                                                           Commands                                                           %
 %------------------------------------------------------------------------------------------------------------------------------%
