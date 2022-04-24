@@ -48,13 +48,12 @@
     }%
 }
 %------------------------------------------------------------------------------------------------------------------------------%
-\newcommand{\bLineQuote}[3]{%
-    ``\textrm{\addfontfeature{ScriptureColor}{#1}}'' {#2} ({#3})~\cite{{#3}}%
-}
+\newcommand{\bQuote}[1]{``\textrm{\addfontfeature{ScriptureColor}{#1}}''}
+\newcommand{\bLineQuote}[3]{\bQuote{{#1}} {#2} ({#3})~\cite{{#3}}}
 \newcommand{\bBlockQuoteAft}[3]{%
     \par\noindent\hspace*{0.1\linewidth}%
     \begin{minipage}{0.8\linewidth}\raggedleft%
-        \noindent ``\textrm{\addfontfeature{ScriptureColor}{#1}}'' ---~{#2}~({#3})~\cite{{#3}}
+        \noindent \bQuote{{#1}} ---~{#2}~({#3})~\cite{{#3}}
     \end{minipage}%
     \vspace*{1.0\baselineskip}%
     \linebreak%
